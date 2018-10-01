@@ -10,5 +10,13 @@ const vm = new Vue({
         axios.get(url).then(response => {
             this.results = response.data.channels
         })
+    },
+    methods:{
+        irCanal: function(event){
+            event.preventDefault();
+            for(result in results){
+                let canal = resul
+            }
+        }
     }
 });
