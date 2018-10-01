@@ -18,7 +18,7 @@
         <div class="row">
 
             <div class="card" style="width:400px" v-for="result in results">
-                <img class="card-img-top" src="{{result.avatar}" alt="Influencer image" style="width:100%">
+                <img class="card-img-top" :src="`https://pixcreen.com/${result.avatar}`" alt="Influencer image" style="width:100%">
                 <div class="card-body">
                     <h4 class="card-title text-center">{{result.influencer_name}}</h4>
                     <h6 class="card bg-success text-white">master</h6>
