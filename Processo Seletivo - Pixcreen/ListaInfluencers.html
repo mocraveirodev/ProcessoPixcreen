@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pixcreen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid" id="app">
+        <h3 class="text-center">Lista de Influencers</h3>
+        <div class="row">
+
+            <div class="card" style="width:400px" v-for="result in results">
+                <img class="card-img-top" src="{{result.avatar}" alt="Influencer image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title text-center">{{result.influencer_name}}</h4>
+                    <h6 class="card bg-success text-white">master</h6>
+                    <p class="card-text">{{result.influencer_bio}}</p>
+                    <p class="card-text">howManyPosts: {{result.howManyPosts}}</p>
+                    <a href="#" class="btn btn-primary">See Channel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="vueLista.js"></script>
+
+</body>
+
+</html>
