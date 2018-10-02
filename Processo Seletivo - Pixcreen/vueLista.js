@@ -14,14 +14,8 @@ const vm = new Vue({
     methods:{
         irCanal: function(event){
             event.preventDefault();
-            let nome = document.querySelector('#nome').innerHTML;
-            console.log(nome);
-            console.log(results);
             for(result in results){
-                if (result.influencer_name == nome){
-                    let canal = result.channel_id;
-                    console.log(canal);
-                }                
+                let canal = resul
             }
         }
     }
