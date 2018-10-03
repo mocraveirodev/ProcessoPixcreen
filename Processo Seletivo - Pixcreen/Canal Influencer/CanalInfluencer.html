@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canal Influencers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="app">
+        <h1>Canal Influencers</h1>
+        <h3>Escolha o Influencer para mostrar o canal</h3>
+
+        <form id="form-cep" action="#" v-on:submit.prevent="mostraCanal" class="form form-inline">
+            <select id="influencer" class="form-control" v-model="influencer">
+                <option disabled value="">Escolha o Influencer</option>
+                <option v-for="result in results" :value="result.channel_id">{{result.influencer_name}}</option>
+            </select>
+            <button type="submit" class="btn btn-info">Mostrar Canal</button>
+        </form>
+
+        <div id="error" style="display: none;" class="alert alert-danger"></div>
+
+        <div id="preloader" style="display: none;" class="alert alert-info">
+            Carregando...
+        </div>
+
+        <div id="results" style="display: none;"></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="vueCanal.js"></script>
+
+</body>
+
+</html>
